@@ -1,0 +1,21 @@
+name: CI
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  # This workflow contains a single job called "build"
+  release:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      - name: Publish Ansible role to Galaxy
+        uses: robertdebock/galaxy-action@1.2.1
+        with:
+          # Your personal Galaxy key found under Galaxy -> Your Profile -> Preferences -> API Key
+          galaxy_api_key: TOCHANGE
+          git_branch: main
