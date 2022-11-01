@@ -1,38 +1,49 @@
-Role Name
+snyssen.compose_deploy
 =========
 
-A brief description of the role goes here.
+This very simple role helps with deploying `docker-compose.yml` files and managing the state of the software stacks defined in them.
+
+The `docker-compose.yml` file (and optionally its accompanying `.env` file) should be located in the usual templates folder under the filenames `docker-compose.yml` and `.env.j2` respectively.
 
 Requirements
 ------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+See the [community.docker.docker_compose module requirements](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_compose_module.html#requirements).
 
 Role Variables
 --------------
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+| Variable                 | Description                                                                                                                                                                                                                                                   | Default value                                         |
+| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
+| container_name           | The name of the container stack; used by other variables.                                                                                                                                                                                                     | `unspecified`                                         |
+| docker_compose_directory | Directory which should hold the compose directories.                                                                                                                                                                                                          | `{{ ansible_user_dir }}/containers`                   |
+| docker_compose_path      | The complete path to the directory that should hold the deployed `docker-compose.yml` file.                                                                                                                                                                   | `{{ docker_compose_directory }}/{{ container_name }}` |
+| deploy_env_template      | Whether the role should also look for a `.env.j2` template that should be deployed alongside the `docker-compose.yml` file.                                                                                                                                   | `false`                                               |
+| docker_compose_state     | The state in which the stack should be after deployment. See the [community.docker.docker_compose module documentation](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_compose_module.html#parameter-state) for possible values. | `present`                                             |
 
 Dependencies
 ------------
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+None
 
 Example Playbook
 ----------------
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
-
-    - hosts: servers
-      roles:
-         - { role: username.rolename, x: 42 }
+```yml
+- hosts: all
+  roles:
+    - name: snyssen.container_deploy
+      vars:
+        container_name: my-container-stack
+```
 
 License
 -------
 
-BSD
+GPL-3.0
 
 Author Information
 ------------------
 
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+email: [dev@snyssen.be](mailto:dev@snyssen.be)
+website: [snyssen.be](https://snyssen.be)
