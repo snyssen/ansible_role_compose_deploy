@@ -1,6 +1,6 @@
 ---
-container_name: unspecified
+stack_name: unspecified
 docker_compose_directory: "{{ ansible_user_dir }}/containers"
-docker_compose_path: "{{ docker_compose_directory }}/{{ container_name }}"
+docker_compose_path: "{{ docker_compose_directory }}/{{ stack_name }}"
 deploy_env_template: false
 docker_compose_state: present
