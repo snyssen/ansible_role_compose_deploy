@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.0.0](https://github.com/snyssen/ansible_role_compose_deploy/compare/v0.0.1...v1.0.0) (2023-12-08)
+
+
+### ⚠ BREAKING CHANGES
+
+* rename container_name input to stack_name for better consistency
+
+### Bug Fixes
+
+* rename container_name input to stack_name for better consistency ([cdb6eb2](https://github.com/snyssen/ansible_role_compose_deploy/commit/cdb6eb29e77853e0995345287fe09ecc2022f196))
+
 ## 0.0.1 (2023-11-02)
 
 
