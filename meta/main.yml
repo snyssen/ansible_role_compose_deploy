@@ -38,5 +38,4 @@ galaxy_info:
     - compose
     - dockercompose
 
-dependencies:
-  - role: community.docker.docker_compose
+dependencies: []
