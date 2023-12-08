@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/snyssen/ansible_role_compose_deploy/compare/v1.0.0...v1.0.1) (2023-12-08)
+
+
+### Miscellaneous Chores
+
+* release 1.0.1 ([cfd17d1](https://github.com/snyssen/ansible_role_compose_deploy/commit/cfd17d1a24b81147c80cd475585581cb90cf068d))
+
 ## [1.0.0](https://github.com/snyssen/ansible_role_compose_deploy/compare/v0.0.1...v1.0.0) (2023-12-08)
 
 
