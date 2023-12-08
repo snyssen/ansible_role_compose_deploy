@@ -15,5 +15,4 @@ jobs:
       - uses: google-github-actions/release-please-action@v4
         with:
           release-type: simple
-          package-name: snyssen.compose_deploy
           token: ${{ secrets.RELEASE_PLEASE_PAT }}
