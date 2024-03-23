@@ -4,3 +4,4 @@ docker_compose_directory: "{{ ansible_user_dir }}/containers"
 docker_compose_path: "{{ docker_compose_directory }}/{{ stack_name }}"
 deploy_env_template: false
 docker_compose_state: present
+docker_compose_pull: always
