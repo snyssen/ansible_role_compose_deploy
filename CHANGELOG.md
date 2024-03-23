@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.2](https://github.com/snyssen/ansible_role_compose_deploy/compare/v2.0.1...v2.0.2) (2024-03-23)
+
+
+### Bug Fixes
+
+* fix typo in docker_compose_pull variable ([9d5b759](https://github.com/snyssen/ansible_role_compose_deploy/commit/9d5b75940a37257fd09ff2447f12ebea650edf90))
+
 ## [2.0.1](https://github.com/snyssen/ansible_role_compose_deploy/compare/v2.0.0...v2.0.1) (2024-03-23)
 
 
