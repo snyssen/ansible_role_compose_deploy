@@ -21,6 +21,5 @@
 - name: "[{{ stack_name }}] Applying state {{ docker_compose_state }} to docker-compose"
   community.docker.docker_compose_v2:
     project_src: "{{ docker_compose_path }}"
-    state: "{{ 'absent' if docker_compose_state == 'absent' else 'present' }}"
-    restarted: "{{ docker_compose_state == 'restarted' }}"
+    state: "{{ docker_compose_state }}"
     pull: true
