@@ -1,5 +1,21 @@
 # Changelog
 
+## [2.0.0](https://github.com/snyssen/ansible_role_compose_deploy/compare/v1.0.1...v2.0.0) (2024-03-23)
+
+
+### ⚠ BREAKING CHANGES
+
+* update docker compose state task so it uses v2
+
+### Features
+
+* update docker compose state task so it uses v2 ([fdf30b0](https://github.com/snyssen/ansible_role_compose_deploy/commit/fdf30b0bf9d250348c7fc248e22fb0f6f4b97c8c))
+
+
+### Bug Fixes
+
+* update state definition of compose task ([4156b90](https://github.com/snyssen/ansible_role_compose_deploy/commit/4156b904b129393387168f09ca1bdd43d0824e19))
+
 ## [1.0.1](https://github.com/snyssen/ansible_role_compose_deploy/compare/v1.0.0...v1.0.1) (2023-12-08)
 
 
