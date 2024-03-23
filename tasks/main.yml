@@ -22,4 +22,4 @@
   community.docker.docker_compose_v2:
     project_src: "{{ docker_compose_path }}"
     state: "{{ docker_compose_state }}"
-    pull: "{{ docker_composePull }}"
+    pull: "{{ docker_compose_pull }}"
