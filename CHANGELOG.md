@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.3](https://github.com/snyssen/ansible_role_compose_deploy/compare/v2.0.2...v2.0.3) (2024-03-23)
+
+
+### Bug Fixes
+
+* update default pull parameter so it respects pull_policy ([31662cb](https://github.com/snyssen/ansible_role_compose_deploy/commit/31662cbc24221e0357749de64a2ee71c513c5e20))
+
 ## [2.0.2](https://github.com/snyssen/ansible_role_compose_deploy/compare/v2.0.1...v2.0.2) (2024-03-23)
 
 
