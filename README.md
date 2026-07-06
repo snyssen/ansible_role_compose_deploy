@@ -8,18 +8,21 @@ The `docker-compose.yml` file (and optionally its accompanying `.env` file) shou
 Requirements
 ------------
 
-See the [community.docker.docker_compose module requirements](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_compose_module.html#requirements).
+See the [community.docker.docker_compose_v2 module requirements](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_compose_v2_module.html#requirements).
 
 Role Variables
 --------------
 
-| Variable                 | Description                                                                                                                                                                                                                                                   | Default value                                         |
-| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
-| stack_name           | The name of the container stack; used to build the `docker_compose_path` using its default value.                                                                                                                                                                                                     | `unspecified`                                         |
-| docker_compose_directory | Directory which should hold the compose directories.                                                                                                                                                                                                          | `{{ ansible_user_dir }}/containers`                   |
-| docker_compose_path      | The complete path to the directory that should hold the deployed `docker-compose.yml` file.                                                                                                                                                                   | `{{ docker_compose_directory }}/{{ stack_name }}` |
-| deploy_env_template      | Whether the role should also look for a `.env.j2` template that should be deployed alongside the `docker-compose.yml` file.                                                                                                                                   | `false`                                               |
-| docker_compose_state     | The state in which the stack should be after deployment. See the [community.docker.docker_compose module documentation](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_compose_module.html#parameter-state) for possible values. | `present`                                             |
+| Variable                    | Description                                                                                                                                                                                                                         | Default value                                         |
+| --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
+| stack_name                  | The name of the container stack; used to build the `docker_compose_path` using its default value.                                                                                                                                  | `unspecified`                                         |
+| docker_compose_directory    | Directory which should hold the compose directories.                                                                                                                                                                                | `{{ ansible_user_dir }}/containers`                   |
+| docker_compose_path         | The complete path to the directory that should hold the deployed `docker-compose.yml` file.                                                                                                                                        | `{{ docker_compose_directory }}/{{ stack_name }}` |
+| deploy_env_template         | Whether the role should also look for a `.env.j2` template that should be deployed alongside the `docker-compose.yml` file.                                                                                                        | `false`                                               |
+| docker_compose_state        | The state in which the stack should be after deployment. See the [community.docker.docker_compose_v2 module documentation](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_compose_v2_module.html) for possible values. | `present`                                             |
+| docker_compose_pull         | Whether to pull images before deploying. See the [docker_compose_v2 module documentation](https://docs.ansible.com/ansible/latest/collections/community/docker/docker_compose_v2_module.html#parameter-pull) for possible values.    | `policy`                                              |
+| docker_compose_remove_orphans | Whether to remove containers for services not defined in the compose file.                                                                                                                                                          | `false`                                               |
+| docker_compose_remove_volumes | Whether to remove volumes when removing containers.                                                                                                                                                                                 | `false`                                               |
 
 Dependencies
 ------------
@@ -34,7 +37,7 @@ The following will fetch the first `docker-compose.yml` template file it sees (u
 ```yml
 - hosts: all
   roles:
-    - name: snyssen.container_deploy
+    - name: snyssen.compose_deploy
       vars:
         stack_name: my-container-stack
 ```
@@ -42,7 +45,7 @@ The following will fetch the first `docker-compose.yml` template file it sees (u
 License
 -------
 
-GPL-3.0
+MIT
 
 Author Information
 ------------------

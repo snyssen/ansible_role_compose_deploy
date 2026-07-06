@@ -14,7 +14,7 @@ galaxy_info:
   # - GPL-3.0-only
   # - Apache-2.0
   # - CC-BY-4.0
-  license: GPL-2.0-or-later
+  license: MIT
 
   min_ansible_version: 2.1
 
@@ -29,9 +29,9 @@ galaxy_info:
   #
   platforms:
     - name: Fedora
-      versions: 'all'
+      versions: "all"
     - name: Ubuntu
-      versions: 'all'
+      versions: "all"
 
   galaxy_tags:
     - docker
