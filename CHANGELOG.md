@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.1.0](https://github.com/snyssen/ansible_role_compose_deploy/compare/v2.0.3...v2.1.0) (2026-07-06)
+
+
+### Features
+
+* add optional cleanup options ([5cbb6b4](https://github.com/snyssen/ansible_role_compose_deploy/commit/5cbb6b4bc829e5c03ba8f3bc92fc2057aa043767))
+* change license to MIT ([235e313](https://github.com/snyssen/ansible_role_compose_deploy/commit/235e3137500b598b6ee858b6669f863ff4cf8de8))
+
+
+### Bug Fixes
+
+* update release-please ([cf79b02](https://github.com/snyssen/ansible_role_compose_deploy/commit/cf79b02f608243a02ba414a5562f45ad0397eafb))
+
 ## [2.0.3](https://github.com/snyssen/ansible_role_compose_deploy/compare/v2.0.2...v2.0.3) (2024-03-23)
 
 
