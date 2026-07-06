@@ -5,3 +5,5 @@ docker_compose_path: "{{ docker_compose_directory }}/{{ stack_name }}"
 deploy_env_template: false
 docker_compose_state: present
 docker_compose_pull: policy
+docker_compose_remove_orphans: false
+docker_compose_remove_volumes: false

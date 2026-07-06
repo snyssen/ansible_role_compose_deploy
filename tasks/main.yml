@@ -23,3 +23,5 @@
     project_src: "{{ docker_compose_path }}"
     state: "{{ docker_compose_state }}"
     pull: "{{ docker_compose_pull }}"
+    remove_orphans: "{{ docker_compose_remove_orphans }}"
+    remove_volumes: "{{ docker_compose_remove_volumes }}"
